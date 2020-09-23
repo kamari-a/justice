@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <link rel="icon" type="image/png" href="./assets/icons/icon-site-favicon.png"> 
+    <title>BandSite</title>
+</head>
+<body>
+    <header> 
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-bar__link">
+                <img src="./assets/logos/logo-bandsite.svg" alt="BandSite's logo" class="nav-bar__logo"/>
+            </a>
+            <ul class="nav-bar__list">
+                <li class="nav-bar__list-item nav-bar__list-item--current">
+                    <a href="./index.html" class="nav-bar__link nav-bar__link--current">Biography</a>
+                </li>
+                <li class="nav-bar__list-item">
+                    <a href="./pages/shows.html" class="nav-bar__link">Shows</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="hero__main-title">Gaspard Augé & <br>
+            Xavier de Rosnay</h1>
+        </section>
+
+        <section class="about">
+            <h2 class="about__main-title">About the Musicians</h2>
+            <img src="./assets/images/photo-header-2.jpg" alt="Close up photograph of a DJ deck, shot in blue light, with red, orange, green, and pink glowing buttons." class="about__main-image"/>       
+            <h3 class="about__quote-text">“We are more comfortable with not fighting what comes naturally. Before we might have thought, ‘We need to be smarter than this’”</h3>
+            <p class="about__quote-name">- Xavier de Rosnay</p>
+            <h3 class="about__sub-header">Xavier de Rosnay & Gaspard Augé</h3>
+
+            <div class="about__text-container">
+                <p class="about__main-text">Xavier De Ronsay and Gaspard Augé had a few mutual friends, who happened to run a record label, seeking tracks for a compilation. With an immediate connection, the pair decided to try their hand at making a song. That’s when they created their breakout single, We Are Your Friends – a feel-good, funk-filled, instant anthem that lost the remix contest, but won the attention of Pedro Winter, director of the newly founded Ed Banger Records, who boasted Daft Punk as former clients. One week later, they were in his office, signing a record deal.</p>
+
+                <p class="about__main-text">Xavier De Ronsay and Gaspard Augé had a few mutual friends, who happened to run a record label, seeking tracks for a compilation. With an immediate connection, the pair decided to try their hand at making a song. That’s when they created their breakout single, We Are Your Friends – a feel-good, funk-filled, instant anthem that lost the remix contest, but won the attention of Pedro Winter, director of the newly founded Ed Banger Records, who boasted Daft Punk as former clients. One week later, they were in his office, signing a record deal.</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2 class="gallery__main-title">Photo Gallery</h2>   
+            <div class="gallery__image-container">
+                <img src="./assets/images/photo-gallery-1.jpg" alt="Photograph of people raving in a orange and pink lit cloud of smoke inside a club." class="gallery__image"/>
+
+                <img src="./assets/images/photo-gallery-2.jpg" alt="Photograph of a smiling woman wearing sunglasses with her arms stretched to the sky at a concert. In the background there is a bright yellow light and orange and blue clouds of smoke." class="gallery__image"/>
+
+                <img src="./assets/images/photo-gallery-3.jpg" alt="Photograph of the inside of a club featuring people with raised hands against a red lit background." class="gallery__image"/>
+
+                <img src="./assets/images/photo-gallery-4.jpg" alt="Photograph of the back of a woman in a striped vest on top of someone's shoulders at a concert. Background is of a stage and bright purple and turquoise lights." class="gallery__image"/>
+
+                <img src="./assets/images/photo-gallery-5.jpg" alt="Photograph of pink and orange paint being thrown into the air at a concert, with outstretched arms reaching up to the sky." class="gallery__image"/>
+
+                <img src="./assets/images/photo-gallery-6.jpg" alt="Photograph of a man singing into a microphone in a green shirt. The background is light green and red smoke." class="gallery__image"/>
+
+                <img src="./assets/images/photo-gallery-7.jpg" alt="Photograph of a stage at a concert, with pink, yellow, green, and blue lights above peoples outstretched arms." class="gallery__image"/>
+
+                <img src="./assets/images/photo-gallery-8.jpg" alt="Photograph of a close up shot of a DJ deck, with pink lit turntables and covered in a purple light." class="gallery__image"/>
+                
+                <img src="./assets/images/photo-gallery-9.jpg" alt="Photograph of blue confetti falling from the ceiling of a club into people's outstretched arms." class="gallery__image"/>
+            </div> 
+        </section>
+
+        <section class="convo-section">
+            <h2 class="convo-section__main-title">Join the Conversation</h2>
+       
+            <section class="convo-section__form-container">
+                <img src="assets/images/photo-avatar.jpg" class="convo-section__user-image">
+                <form id="commentForm" class="convo-section__form" novalidate>
+                    <label for="fullName" class="convo-section__name-heading">NAME</label>
+                    <input type="text" id="fullName" name="fullName" class="convo-section__name-box" placeholder="Mohan Muruge"/>
+
+                    <label for="commentBox" class="convo-section__comment-heading">COMMENT</label>
+                    <textarea id="commentBox" name="commentBox" class="convo-section__comment-box" placeholder="Add a new comment" rows="5" cols="5"></textarea>
+                    
+                    <button type="submit" id="commentBtn" class="convo-section__button">COMMENT</button>
+                </form>
+            </section>
+
+            <section class="convo-section__live-comments"></section>
+        </section>
+    </main> 
+ 
+    <footer class="contact">
+        <section class="contact__heading-container">
+            <h2 class="contact__main-title">Get In Touch</h2>
+            <div class="contact__icon-container">
+                <a href="https://www.instagram.com/" class="contact__icon-link">
+                    <img src="./assets/icons/icon-instagram.svg" alt="Instagram's logo" class="contact__icon-image"/>
+                </a>
+
+                <a href="https://www.facebook.com/" class="contact__icon-link">
+                    <img src="./assets/icons/icon-facebook.svg" alt="Facebook's logo" class="contact__icon-image"/>
+                </a>
+
+                <a href="https://twitter.com/explore" class="contact__icon-link">
+                    <img src="./assets/icons/icon-twitter.svg" alt="Twitter's logo" class="contact__icon-image"/>
+                </a> 
+            </div>
+            <img src="assets/logos/logo-bandsite.svg" alt="Bandsite's logo" class="contact__logo"/>
+        </section>
+
+        <section class="contact__contact-container">
+            <div class="contact__contact-block">
+                <h4 class="contact__contact-name">Richard Rovner<br>
+                The Bees Knees Management
+                </h4>
+                <address class="contact__contact-info">460 King Street West <br>
+                Toronto, Ontario M5V 1L7
+                </address>
+                <p class="contact__contact-email">
+                    <a class="contact__email-link" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+                </p>       
+            </div>
+
+            <div class="contact__contact-block">
+                <h4 class="contact__contact-name">Marsha Vlasic<br>
+                Artist Group International
+                </h4>
+                <p class="contact__contact-info">Booking Agent for <br>
+                US/South America/Japan</p>
+                <p class="contact__contact-email">
+                    <a class="contact__email-link" href="mailto:marsha.vlasic@artistgrp.com">marsha.vlasic@artistgrp.com</a>
+                </p>       
+            </div>
+
+            <div class="contact__contact-block">
+                <h4 class="contact__contact-name">Russel Warby<br>
+                William Morrir Entertainment</h4>
+                <p class="contact__contact-info">Booking Agent for<br>
+                UK/EU/AU</p>
+                <p class="contact__contact-email">
+                    <a class="contact__email-link" href="mailto:RLW@wmeentertainment.com">RLW@wmeentertainment.com</a>
+                </p>       
+            </div>
+        </section>
+        <p class="contact__copyright">Copyright The Bees Knees &copy; 2018 All Rights Reserved</p>
+    </footer>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

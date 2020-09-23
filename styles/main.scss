@@ -1,0 +1,359 @@
+@import './partials/fonts';
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/styles';
+
+/* Hero Section */
+.hero { 
+    padding: $wrapper-mobile;
+    display: flex;
+    align-items: center;
+    height: 11.44rem;
+    background-image: url('../assets/images/photo-header-1.jpg');
+    @include hero-image;
+
+    @include tablet {
+        height: 25rem;
+        padding: $wrapper-tablet;
+    }
+
+    @include desktop {
+        height: 41.88rem;
+        padding: $wrapper-desktop;
+    }
+
+    &__main-title {
+        @include heading-font-mobile;
+        color: $primary-color-3;
+
+        @include tablet {
+            @include heading-font--hero;
+        }
+    }
+}
+
+/* About Section */
+.about {
+    padding: $wrapper-mobile;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+
+    @include tablet {
+        padding: $wrapper-tablet;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+    }
+
+    @include desktop {
+        padding: $wrapper-desktop;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    &__main-title {
+        @include heading-font-mobile;
+        padding-bottom: 1.5rem;
+
+        @include tablet {
+            @include heading-font;
+        }
+
+        @include desktop {
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__main-image {
+        width: 100%;
+        padding-bottom: 1.5rem;
+
+        @include desktop {
+            padding: 0 2.5rem 3rem;
+        }
+    }
+
+    &__quote-text {
+        @include subheading-font-mobile;
+        padding-bottom: 2rem;
+        font-weight: bold;
+
+        @include tablet {
+            @include subheading-font;
+        }
+
+        @include desktop {
+            padding: 0 2.5rem 2.5rem;
+        }
+    }
+
+    &__quote-name {
+        @include paragraph-font-mobile;
+        padding-bottom: 2.5rem;
+        font-weight: bold;
+
+        @include tablet {
+            @include paragraph-font;
+        }
+
+        @include desktop {
+            padding: 0 2.5rem 3.5rem;
+        }
+    }
+
+    &__sub-header {
+        @include subheading-font-mobile;
+
+        @include tablet {
+            @include subheading-font;
+        }
+
+        @include desktop {
+            padding: 0 2.5rem 0;
+        }
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__main-text {
+        padding-top: 1.5rem;
+        @include paragraph-font-mobile;
+
+        @include tablet {
+            @include paragraph-font;
+            padding-right: 24px;
+        }
+
+        @include desktop {
+            padding: 2rem 2.5rem 0;
+        }
+    }
+
+    &__main-text:nth-child(even) {
+
+        @include desktop {
+            padding-left: 0;
+        }
+    }
+}
+
+/* Photo Gallery Section */
+.gallery {
+    padding: $wrapper-mobile;
+    background-color: $primary-color-4;
+    padding-bottom: 1.5rem;
+
+    @include tablet {
+        padding: $wrapper-tablet;
+        padding-bottom: 1.5rem;
+    }
+
+    @include desktop {
+        padding: $wrapper-desktop;
+        padding-top: 3rem;
+        padding-bottom: 1.75rem;
+    }
+
+    &__main-title {
+        @include heading-font-mobile;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            @include heading-font;
+        }
+
+        @include desktop {
+            padding-top: 0; 
+            padding-bottom: 3.25rem;
+        }
+    }
+
+    &__image-container {
+        @include center;
+        flex-wrap: wrap;
+    }
+
+    &__image {
+        padding: 0.5rem 0;
+        width: 100%;
+        &:hover {
+            filter: grayscale(100%);
+        }
+    
+        @include tablet {
+            width: 33%;
+            padding: 0.75rem;
+        }
+    }
+}
+
+/* Join the Conversation Section */
+.convo-section {
+    padding: $wrapper-mobile;
+    background-color: $primary-color-3;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+
+    @include tablet {
+        padding: $wrapper-tablet;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    @include desktop {
+        padding: $wrapper-desktop;
+        padding-top: 3rem;
+        padding-bottom: 2.5rem;
+    }
+
+    &__main-title {
+        @include heading-font-mobile;
+        padding-bottom: 2.5rem;
+
+        @include tablet {
+            @include heading-font;
+        }
+
+        @include desktop {
+            padding-bottom: 3.5rem;
+        }
+    }
+
+    &__form-container {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            padding-left: 6rem;
+            padding-right: 6rem;
+        }
+
+        @include desktop {
+            padding-left: 10rem;
+            padding-right: 10rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__user-image {
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+        margin-right: 1rem;
+        margin-top: 2rem;
+    }
+
+    &__name-heading {
+        @include subheading-font-mobile-2;  
+    }
+
+    &__name-box {
+        @include input;
+    }
+
+    &__comment-heading {
+        @include subheading-font-mobile-2;
+    }
+
+    &__comment-box {
+        @include input;
+    }
+
+    &__button {
+        @include button;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            align-self: flex-end;
+            margin-bottom: 1.5rem;
+        }
+
+        @include desktop {
+            width: 10rem;
+        }
+    }
+
+    &__live-comments {
+
+        @include tablet {
+            padding-left: 6rem;
+            padding-right: 6rem;
+        }
+
+        @include desktop {
+            padding-left: 10rem;
+            padding-right: 10rem;
+        }
+    }
+
+    &__comment-container {
+        border-top: 1px solid $primary-color-6;
+        border-bottom: 1px solid $primary-color-4;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    &__top-row {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include tablet {
+            justify-content: flex-start;
+            align-items: center;
+            align-items: center;
+        }
+    }
+
+    &__comment-image {
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+        margin-right: 1rem;
+        background-color: $primary-color-6;
+    }
+
+    &__comment-name {
+        @include subheading-font-mobile;
+
+        @include tablet {
+            @include subheading-font;
+            padding-right: 1rem;
+        }
+    }
+
+    &__comment-time {
+        @include paragraph-font-mobile;
+        color: $primary-color-5;
+        position: absolute;
+        right: 1.5rem;
+
+        @include tablet {
+            @include subheading-font;
+            font-size: 1rem;
+            position: relative;
+            right: 0;
+        }
+    }
+
+    &__comment-text {
+        @include paragraph-font-mobile;
+        margin-left: 4rem;
+
+        @include tablet {
+            @include paragraph-font;
+        }
+    }
+}

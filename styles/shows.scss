@@ -1,0 +1,238 @@
+@import './partials/fonts';
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/styles';
+
+/* Hero Section */
+.hero { 
+    padding: $wrapper-mobile;
+    padding-top: 4rem;
+    height: 29.5rem;
+    background-image: url('../assets/images/photo-hero-2.jpg');
+    @include hero-image;
+
+    @include tablet {
+        height: 41.88rem;
+        padding: $wrapper-tablet;
+        padding-top: 6rem;
+    }
+
+    @include desktop {
+        height: 41.88rem;
+        padding: $wrapper-desktop;
+        padding-top: 10rem;
+    }
+
+    &__sub-header {
+        @include subheading-font-mobile;
+        color: $primary-color-3;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            @include subheading-font;
+            padding-bottom: 1.5rem;
+        }
+
+        @include desktop {
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__container {
+
+        @include desktop {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+    }
+
+    &__main-title {
+        @include heading-font-mobile;
+        color: $primary-color-3;
+        padding-bottom: 4rem;
+
+        @include tablet {
+            @include heading-font--hero;
+            max-width: 40rem;
+        }
+
+        @include desktop {
+            font-size: 3rem;
+            padding-right: 4rem;
+            padding-bottom: 0;
+            width: 36rem;
+        }
+    }
+    
+    &__music-player {
+        height: 120px;
+
+        @include tablet {
+            width: 60%;
+            height: 166px;
+        }
+
+        @include desktop {
+            width: 27.25rem;
+            height: 9.13rem;
+        }
+    }
+}
+
+/* Show Listings */
+.shows {
+    background-color: $primary-color-3;
+    padding: $wrapper-mobile;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    @include tablet {
+        padding: $wrapper-tablet;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    @include desktop {
+        padding: $wrapper-desktop;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__main-title {
+        @include heading-font-mobile;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            @include heading-font;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__heading-container {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+        }
+    }
+
+    &__table-heading {
+ 
+        @include tablet {
+            @include subheading-font;
+            color: $primary-color-5;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            width: 25%;
+            @include paragraph-font;
+        }
+
+        @include desktop {
+            padding-top: 0;
+        }
+    }
+
+    &__table-heading--button {
+        
+        @include tablet {
+            width: 11rem;
+        }
+    }
+ 
+    &__shows-container {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $primary-color-6;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        @include desktop {
+            width: 44rem;
+        }
+    }
+
+    &__heading-date {
+        @include subheading-font-mobile-2;
+        padding-bottom: 1rem;
+        padding-top: 1.5rem;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__shows-date {
+        @include subheading-font-mobile;
+        padding-bottom: 1.5rem;
+        color: $primary-color-1;
+
+        @include tablet {
+            padding: 0;
+            width: 25%;
+            @include paragraph-font;
+        }
+    }
+
+    &__heading-venue {
+        @include subheading-font-mobile-2;
+        padding-bottom: 1rem;
+        
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__shows-venue {
+        @include subheading-font-mobile;
+        color: $primary-color-1;
+        padding-bottom: 1.5rem;
+
+        @include tablet {
+            padding: 0;
+            width: 25%;
+            @include paragraph-font;
+        }
+    }
+
+    &__heading-location {
+        @include subheading-font-mobile-2;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__shows-location {
+        @include subheading-font-mobile;
+        color: $primary-color-1;
+        padding-bottom: 2rem;
+
+        @include tablet {
+            padding: 0;
+            width: 25%;
+            @include paragraph-font;
+        }
+    }
+
+    &__button {
+        @include button;
+
+        @include desktop {
+            width: 25%;
+        }
+    }
+}

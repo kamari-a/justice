@@ -1,0 +1,288 @@
+/* Universal Styling */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: 16px;
+}
+
+/* Nav */
+.nav-bar {
+    background-color: $primary-color-1;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5rem;
+    padding: $wrapper-mobile;
+    @include nav-bar-flex;
+    padding-top: $nav-pd-top;
+
+    @include tablet {
+        padding: $wrapper-tablet;
+        padding-top: $nav-pd-top;
+    }
+
+    @include desktop {
+        padding: $wrapper-desktop;
+        padding-top: $nav-pd-top;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $primary-color-5;
+        padding-bottom: 5px;
+        &:hover {
+            @include text-color-hover;
+        }
+    }
+
+    &__link--current {
+        color: $primary-color-4;
+    }
+
+    &__logo {
+ 
+        @include nav-breakpoint {
+            margin-right: $nav-margin;
+        }
+
+        @include desktop {
+            margin-right: $nav-margin;
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style: none; 
+
+        @include nav-breakpoint {
+            height: 100%;
+            align-items: center;
+        }
+    }
+
+    &__list-item {
+        width: 10rem;
+        text-align: center;
+
+        @include nav-breakpoint {
+            height: 100%;
+            padding-top: 1rem;
+            width: 100%;
+            margin-right: $nav-margin;
+        }
+
+        @include desktop {
+            margin-right: $nav-margin;
+        }
+    }
+
+    &__list-item--current {
+        border-bottom: 5px solid $primary-color-4;
+        padding-bottom: 5px;
+        &:hover {
+            border-bottom: 5px solid $primary-color-2;
+        }
+
+        @include tablet {
+            margin-right: $nav-margin;
+        }
+        
+        @include desktop {
+            margin-right: $nav-margin;
+        }
+    }
+}
+
+/* Get in Touch Section */
+.contact {
+    background-color: $primary-color-1;
+    color: $primary-color-4;
+    padding: 2.5rem 0.94rem 2rem;
+    display: flex;
+    flex-direction: column;
+    @include paragraph-font-mobile;
+
+    @include tablet {
+        padding: $wrapper-tablet;
+        padding-top: 3rem;
+        padding-bottom: 2.5rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        padding: $wrapper-desktop;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    &__heading-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80%;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 2rem;
+        }
+
+        @include desktop {
+            justify-content: flex-start;
+            padding-bottom: 3.5rem;
+        }
+    }
+
+    &__main-title {
+        padding-right: 4rem;
+        padding-bottom: 1.5rem;
+        @include heading-font-mobile;
+        @include contact-header-pd;
+        
+        @include tablet {
+            @include heading-font;
+            padding-bottom: 0;
+        }
+
+        @include desktop {
+            padding-right: 0;
+        }
+    }
+
+    &__icon-container {
+
+        @include desktop {
+            padding-left: 3.5rem;
+        }
+    }
+
+    &__icon-image {
+        padding-right: 1.5rem;
+
+        @include tablet {
+            padding-right: 2rem;
+        }
+    }
+
+    &__logo {
+        display: none;
+
+        @include tablet {
+            display: block;
+            padding-left: 7rem;
+        }
+
+        @include desktop {
+            position: absolute;
+            right: 11.25rem;
+        }
+    }
+
+    &__contact-container {
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        @include desktop {
+            justify-content: flex-start;
+        }
+    }
+
+    &__contact-block {
+        padding-bottom: 1.5rem;
+
+        @include desktop {
+            padding-bottom: 0;
+            margin-right: 3rem;
+        }
+    }
+
+    &__contact-name {
+        padding-bottom: 1.5rem;
+        font-size: 0.88rem;
+        @include paragraph-font-mobile;
+        &:hover {
+            @include text-color-hover;
+        }
+
+        @include tablet {
+            @include paragraph-font;
+            padding-bottom: 1rem;
+        }
+
+        @include desktop {
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__contact-info {
+        padding-bottom: 1.5rem;
+        font-style: normal;
+        @include paragraph-font-mobile;
+        &:hover {
+            @include text-color-hover;
+        }
+
+        @include tablet {
+            @include paragraph-font;
+        }
+
+        @include desktop {
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__contact-email {
+        @include paragraph-font-mobile;
+        &:hover {
+            @include text-color-hover;
+        }
+
+        @include tablet {
+            @include paragraph-font;
+            padding-bottom: 1rem;
+        }
+        
+        @include desktop {
+            padding-bottom: 2.5rem;
+        }
+    }
+
+    &__email-link {
+        @include paragraph-font-mobile;
+        color: $primary-color-4;
+        text-decoration: none;
+        &:hover {
+            @include text-color-hover;
+            text-decoration: underline;
+        }
+
+        @include tablet {
+            @include paragraph-font;
+        }
+    }
+    
+    &__copyright {
+        @include paragraph-font-mobile;
+        width: 70%;
+
+        @include tablet {
+            @include paragraph-font;
+        }
+    }
+}
